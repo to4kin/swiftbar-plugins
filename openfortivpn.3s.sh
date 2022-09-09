@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 # Get current status of a OpenFortiVPN connection with options to connect/disconnect.
 # Also show the status of certificate with options to renew from 1Password.
