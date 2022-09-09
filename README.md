@@ -1,0 +1,2 @@
+# swiftbar-plugins
+SwiftBar Plugins
