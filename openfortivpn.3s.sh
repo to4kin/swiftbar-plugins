@@ -51,11 +51,13 @@ case "$1" in
         eval echo "$VPN_PASSWORD" | eval sudo "$VPN_EXECUTABLE" "$VPN_EXECUTABLE_PARAMS" &> /dev/null &
         # Wait for connection so menu item refreshes instantly
         until eval "$VPN_CONNECTED"; do sleep 1; done
+        osascript -e 'display notification "VPN connection successfully established" with title "OpenFortiVPN" subtitle "Connected"'
         ;;
     disconnect)
         eval "$VPN_DISCONNECT_CMD"
         # Wait for disconnection so menu item refreshes instantly
         until [ -z "$(eval "$VPN_CONNECTED")" ]; do sleep 1; done
+        osascript -e 'display notification "VPN connection terminated successfully" with title "OpenFortiVPN" subtitle "Disconnected"'
         ;;
     sync)
         case "$2" in
