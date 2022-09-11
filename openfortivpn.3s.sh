@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get current status of a OpenFortiVPN connection with options to connect/disconnect.
-# Also show the status of certificate with options to renew from 1Password.
+# Also shows the certificate status with option to renew from 1Password.
 # Commands that require admin permissions should be whitelisted with 'visudo', e.g.:
 # YOURUSERNAME ALL=(ALL) NOPASSWD: /usr/local/bin/openfortivpn
 # YOURUSERNAME ALL=(ALL) NOPASSWD: /usr/bin/killall -2 openfortivpn
@@ -10,7 +10,7 @@
 # <xbar.version>v1.0</xbar.version>
 # <xbar.author>Anton Bastin</xbar.author>
 # <xbar.author.github>to4kin</xbar.author.github>
-# <xbar.desc>Displays status of a OpenFortiVPN interface with option to connect/disconnect.</xbar.desc>
+# <xbar.desc>Displays status of a OpenFortiVPN interface with options to connect/disconnect.</xbar.desc>
 # <xbar.image>https://i.imgur.com/v2aW5mo.png</xbar.image>
 
 VPN_INTERFACE=ppp0
