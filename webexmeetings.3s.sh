@@ -17,7 +17,7 @@ case "$1" in
         # Kill Webex Meetings
         eval "$KILL_COMMAND"
         # Wait for kill so menu item refreshes instantly
-        until eval "$STATUS_COMMAND"; do sleep 1; done
+        until [ -z "$(eval "$STATUS_COMMAND")" ]; do sleep 1; done
         osascript -e 'display notification "Webex Meetings successfully killed" with title "Webex Meetings" subtitle "Killed"'
         ;;
 esac
